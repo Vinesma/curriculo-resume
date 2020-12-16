@@ -1,13 +1,8 @@
 from jinja2 import FileSystemLoader, Environment
+import json
 
-data = { "nome": "Otavio Cornelio da Silva",
-        "nacionalidade": "Brasileiro",
-        "estado_civil": "Solteiro",
-        "idade": 23,
-        "endereco": "Rua Lagoa das Capivaras, Nº 53, Jardim das Oliveiras",
-        "cep": "08111-150",
-        "cidade": "São Paulo",
-        "estado": "SP"}
+with open("./data/ptbr.json") as dataFile:
+    data = json.load(dataFile)
 
 def renderFromTemplate(directory, template_name, **kwargs):
     loader = FileSystemLoader(directory)

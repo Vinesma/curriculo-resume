@@ -3,46 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otavio Cornelio da Silva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Currículo - Otavio Cornelio da Silva</title>
 </head>
 <body>
-    <div class="personal-info">
-        <h2>{{ nome }}</h2>
-        <p>{{ nacionalidade }}, {{ estado_civil }}, {{ idade }}</p>
-        <p>{{ endereco }} - CEP {{ cep }}</p>
-        <p>{{ cidade }}, {{ estado }}</p>
-    </div>
-    <div class="contact-info">
-        <p>Telefone: ({{ ddd }}) {{ tel }}</p>
-        <p>Email: {{ email }}</p>
-        <p>GitHub: {{ github }}</p>
-    </div>
-    <div class="education">
-        <h3>Formação:</h3>
-        {% for item in education %}
-        <p>{{ item }}</p>
-        {% endfor %}
-    </div>
-    <div class="abilities">
-        <h4><i>Programação:</i></h4>
-        {% for item in skills %}
-        <div class="skillblock">
-            <p>{{ item.name }}</p>
-            <p>{{ item.level }}</p>
+    <div class="container">
+        <div class="container-info-sm">
+            <h1>{{ nome }}</h1>
+            <p>{{ nacionalidade }}, {{ estado_civil }}, {{ idade }} anos</p>
+            <p>{{ endereco }} - CEP {{ cep }}</p>
+            <p>{{ cidade }}, {{ estado }}</p>
         </div>
-        {% endfor %}
-    </div>
-    <div class="experiences">
-        <ol>
-            {% for item in experiences %}
-            <li>{{ item }}</li>
+        <div class="container-info-sm">
+            <p>Telefone: ({{ ddd }}) {{ tel }}</p>
+            <p>Email: {{ email }}</p>
+            <p>GitHub: {{ github }}</p>
+        </div>
+        <div class="container-info">
+            <h3>Formação:</h3>
+            {% for item in educacao %}
+            <p>{{ item.descricao }}, com início em {{ item.inicio }} e término em {{ item.concluido }}</p>
             {% endfor %}
-        </ol>
-    </div>
-    <div class="others">
-        {% for item in others %}
-        <p>{{ item }}</p>
-        {% endfor %}
+        </div>
+        <div class="container-info">
+            <h3>Habilidades:</h3>
+            <div class="container-inset">
+            {% for item in habilidades %}
+                <h4><i>{{ item.categoria }}:</i></h4>
+                {% for skill in item.skills %}
+                <div class="skillblock">
+                <p>{{ skill.nome }}</p>
+                {% if skill.nivel < 2 %}
+                <p>Básico</p>
+                {% elif skill.nivel == 2 %}
+                <p>Intermediário</p>
+                {% elif skill.nivel == 3 %}
+                <p>Avançado</p>
+                {% else %}
+                <p>Nativo</p>
+                {% endif %}
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container-info">
+            <h3>Experiências Anteriores</h3>
+            <ol>
+                {% for item in experiencias %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="container-info">
+            <h3>Outros</h3>
+            {% for item in outros %}
+            <p>{{ item }}</p>
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>
