@@ -10,45 +10,63 @@
     <div class="container">
         <div class="container-info-sm">
             <h1>{{ nome }}</h1>
-            <p>{{ nacionalidade }}, {{ estado_civil }}, {{ idade }} anos</p>
+            <p><i>{{ nacionalidade }}, {{ estado_civil }}, {{ idade }} anos</i></p>
             <p>{{ endereco }} - CEP {{ cep }}</p>
             <p>{{ cidade }}, {{ estado }}</p>
         </div>
         <div class="container-info-sm">
-            <p>Telefone: ({{ ddd }}) {{ tel }}</p>
-            <p>Email: {{ email }}</p>
-            <p>GitHub: {{ github }}</p>
+            <div class="vertical-group-block-marginless">
+                <img class="small-icon" src="./assets/phone-square-alt-solid.svg" alt="Telephone icon">
+                <p><a href="tel:+55({{ ddd }}){{ tel }}">({{ ddd }}) {{ tel }}</a></p>
+            </div>
+            <div class="vertical-group-block-marginless">
+                <img class="small-icon" src="./assets/envelope-square-solid.svg" alt="Email icon">
+                <p><a href="mailto:{{ email }}">{{ email }}</a></p>
+            </div>
+            <div class="vertical-group-block-marginless">
+                <img class="small-icon" src="./assets/github-square-brands.svg" alt="GitHub icon">
+                <p><a href="{{ github }}">GitHub</a></p>
+            </div>
         </div>
         <div class="container-info">
-            <h3>Formação:</h3>
+            <div class="vertical-group-block">
+                <img class="small-icon" src="./assets/graduation-cap-solid.svg" alt="Graduation cap icon">
+                <h3>Formação:</h3>
+            </div>
             {% for item in educacao %}
-            <p>{{ item.descricao }}, com início em {{ item.inicio }} e término em {{ item.concluido }}</p>
+            <p>{{ item.descricao }}, com início em {{ item.inicio }} e término em {{ item.concluido }}.</p>
             {% endfor %}
         </div>
         <div class="container-info">
-            <h3>Habilidades:</h3>
-            <div class="container-inset">
+            <div class="vertical-group-block">
+                <img class="small-icon" src="./assets/tools-solid.svg" alt="Graduation cap icon">
+                <h3>Habilidades:</h3>
+            </div>
             {% for item in habilidades %}
+                <div class="container-inset">
                 <h4><i>{{ item.categoria }}:</i></h4>
                 {% for skill in item.skills %}
-                <div class="skillblock">
+                <div class="skill-block">
                 <p>{{ skill.nome }}</p>
                 {% if skill.nivel < 2 %}
                 <p>Básico</p>
                 {% elif skill.nivel == 2 %}
                 <p>Intermediário</p>
                 {% elif skill.nivel == 3 %}
-                <p>Avançado</p>
+                <p><strong>Avançado</strong></p>
                 {% else %}
-                <p>Nativo</p>
+                <p><strong>Nativo</strong></p>
                 {% endif %}
                 </div>
                 {% endfor %}
+                </div>
                 {% endfor %}
-            </div>
         </div>
         <div class="container-info">
-            <h3>Experiências Anteriores</h3>
+            <div class="vertical-group-block">
+                <img class="small-icon" src="./assets/briefcase-solid.svg" alt="Briefcase icon">
+                <h3>Experiências Anteriores</h3>
+            </div>
             <ol>
                 {% for item in experiencias %}
                 <li>{{ item }}</li>
@@ -56,7 +74,10 @@
             </ol>
         </div>
         <div class="container-info">
-            <h3>Outros</h3>
+            <div class="vertical-group-block">
+                <img class="small-icon" src="./assets/exclamation-circle-solid.svg" alt="Exclamation point icon">
+                <h3>Outros</h3>
+            </div>
             {% for item in outros %}
             <p>{{ item }}</p>
             {% endfor %}
