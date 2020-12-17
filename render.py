@@ -38,20 +38,27 @@ def main():
 
     # Load data
     data = load_from_json("./data/ptbr.json")
+    data_en = load_from_json("./data/en.json")
     locale = load_from_json("./data/locale_ptbr.json")
     locale_en = load_from_json("./data/locale_en.json")
     # Merge personal data and locale data
     data.update(locale)
+    data_en.update(locale_en)
 
     # Convert year into current age
     data['idade'] = deduce_age(year, data['idade'])
+    data_en['idade'] = deduce_age(year, data_en['idade'])
     # Retrieve some data to create filenames
     name = data['nome']
     filename_pdf_pt = create_filename("Currículo", name, day, month, year)
     filename_pdf_en = create_filename("Resume", name, day, month, year)
 
     # Templates -> HTML [-> PDF]
+    ## render portuguese resume
     write_to_html("index.html", "template1.html", **data)
     convert_to_pdf("index.html", filename_pdf_pt)
+    ## render english resume
+    write_to_html("resume.html", "template1.html", **data_en)
+    convert_to_pdf("resume.html", filename_pdf_en)
 
 main()
