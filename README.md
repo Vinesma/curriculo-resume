@@ -1,6 +1,6 @@
 # Currículo / Resume
 
-![Page available](https://github.com/Vinesma/curriculo-resume/workflows/render-page/badge.svg)
+![render-page](https://github.com/Vinesma/curriculo-resume/workflows/render-page/badge.svg)
 
 [PT/BR] Esse repositório contém templates para gerar meu currículo em Português e Inglês.
 
