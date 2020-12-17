@@ -2,7 +2,7 @@
     "nome": "Otavio Cornelio da Silva",
     "nacionalidade": "Brasileiro",
     "estado_civil": "Solteiro",
-    "idade": 23,
+    "idade": 1997,
     "endereco": "Rua Lagoa das Capivaras, Nº 53, Jardim das Oliveiras",
     "cep": "08111-150",
     "cidade": "São Paulo",
@@ -39,12 +39,12 @@
                     "nivel": 3
                 },
                 {
-                    "nome": "Git",
+                    "nome": "Bash",
                     "nivel": 3
                 },
                 {
-                    "nome": "JSON",
-                    "nivel": 3
+                    "nome": "Git",
+                    "nivel": 2
                 },
                 {
                     "nome": "SASS",
@@ -55,7 +55,15 @@
                     "nivel": 2
                 },
                 {
+                    "nome": "React Native",
+                    "nivel": 2
+                },
+                {
                     "nome": "Node.js",
+                    "nivel": 2
+                },
+                {
+                    "nome": "jQuery",
                     "nivel": 2
                 },
                 {
@@ -88,6 +96,14 @@
                     "nivel": 3
                 },
                 {
+                    "nome": "JSON",
+                    "nivel": 3
+                },
+                {
+                    "nome": "Regex (Expressões Regulares)",
+                    "nivel": 2
+                },
+                {
                     "nome": "Photoshop",
                     "nivel": 2
                 },
@@ -98,6 +114,19 @@
                 {
                     "nome": "Adobe Premiere",
                     "nivel": 2
+                }
+            ]
+        },
+        {
+            "categoria": "Metodologias",
+            "skills": [
+                {
+                    "nome": "Agile",
+                    "nivel": 0
+                },
+                {
+                    "nome": "Scrum",
+                    "nivel": 0
                 }
             ]
         },
@@ -120,11 +149,12 @@
         }
     ],
     "experiencias": [
-        "Estágio como auxiliar nas atividades de suporte técnico e manutenção de banco de dados na empresa ATAC Distribuidora no período de 08/2017 à 02/2018.",
-        "Projeto Lixo Eletrônico da FACAPE no período de 2015 à 2016.",
-        "Projeto FATI (Faculdade Aberta da Terceira Idade) da FACAPE no período de 02/2016 à 06/2016."
+        "Estágio como auxiliar nas atividades de suporte técnico e manutenção de banco de dados na empresa ATAC Distribuidora no período de 08/2017 à 02/2018. Utilizei conhecimentos de SQL e manutenção de computadores, também utilizei Python para automatizar e agilizar processos.",
+        "Projeto Lixo Eletrônico da FACAPE no período de 2015 à 2016. Utilizei conhecimento de manutenção de computadores para reutilizar os descartes eletrônicos da população e transforma-los em novas máquinas para serem doadas.",
+        "Projeto FATI (Faculdade Aberta da Terceira Idade) da FACAPE no período de 02/2016 à 06/2016. Utilizei conhecimentos gerais em computação para organizar e ministrar aulas para pessoas de terceira idade."
     ],
     "outros": [
         "Carteira Nacional de Habilitação (Categoria B)"
-    ]
+    ],
+    "repository": "https://github.com/Vinesma/curriculo-resume"
 }

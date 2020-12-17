@@ -18,6 +18,10 @@ h4 {
     margin-bottom: .6rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 p {
     margin-bottom: .2rem;
     color: #2e2f3e;
@@ -34,6 +38,14 @@ li {
 
 h1, h2, h3, h4, p, li {
     font-family: sans-serif;
+}
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
 }
 
 .container {
@@ -61,6 +73,11 @@ h1, h2, h3, h4, p, li {
 
 .container-inset .skill-block:last-child {
     margin-bottom: 0;
+}
+
+.quiet-text {
+    color: #2e2f3e;
+    opacity: 0.5;
 }
 
 .skill-block {
@@ -94,4 +111,8 @@ h1, h2, h3, h4, p, li {
     height: 1.2rem;
     margin-right: .4rem;
     margin-bottom: .2rem;
+}
+
+.tiny-icon-text {
+    height: 0.9rem;
 }

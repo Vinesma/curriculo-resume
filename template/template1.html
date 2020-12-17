@@ -48,7 +48,9 @@
                 {% for skill in item.skills %}
                 <div class="skill-block">
                 <p>{{ skill.nome }}</p>
-                {% if skill.nivel < 2 %}
+                {% if skill.nivel < 1 %}
+                <p>-</p>
+                {% elif skill.nivel == 1 %}
                 <p>Básico</p>
                 {% elif skill.nivel == 2 %}
                 <p>Intermediário</p>
@@ -82,6 +84,9 @@
             <p>{{ item }}</p>
             {% endfor %}
         </div>
+        <footer>
+            <a href="{{ repository }}"><p class="quiet-text">Feito com <img class="tiny-icon-text" src="./assets/coffee-solid.svg" alt="Coffee icon">, jinja2 e Python <3</p></a>
+        </footer>
     </div>
 </body>
 </html>
