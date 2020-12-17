@@ -2,7 +2,7 @@
 
 name: render-page
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
     # Triggers the workflow on push or pull request events but only for the main branch
     push:
@@ -22,11 +22,11 @@ jobs:
         steps:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         - uses: actions/checkout@v2
-        
+
         # Install Python
         - name: Setup Python
           uses: actions/setup-python@v2.2.0
-        
+
         # Install the template engine
         - uses: BSFishy/pip-action@v1
           with:
@@ -35,3 +35,9 @@ jobs:
         # Run the script
         - name: Render html
           run: python render.py
+
+        - name: GitHub Pages
+          uses: crazy-max/ghaction-github-pages@v2.2.0
+          with:
+            # Build directory to deploy
+            build_dir: public
