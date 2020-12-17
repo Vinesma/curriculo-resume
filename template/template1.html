@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Currículo - Otavio Cornelio da Silva</title>
+    <title>{{ locale_title_prefix }} - Otavio Cornelio da Silva</title>
 </head>
 <body>
     <div class="container">
         <div class="container-info-sm">
             <h1>{{ nome }}</h1>
-            <p><i>{{ nacionalidade }}, {{ estado_civil }}, {{ idade }} anos</i></p>
+            <p><i>{{ nacionalidade }}, {{ estado_civil }}, {{ idade }} {{ locale_years }}</i></p>
             <p>{{ endereco }} - CEP {{ cep }}</p>
             <p>{{ cidade }}, {{ estado }}</p>
         </div>
@@ -31,16 +31,16 @@
         <div class="container-info">
             <div class="vertical-group-block">
                 <img class="small-icon" src="./assets/graduation-cap-solid.svg" alt="Graduation cap icon">
-                <h3>Formação:</h3>
+                <h3>{{ locale_education }}:</h3>
             </div>
             {% for item in educacao %}
-            <p>{{ item.descricao }}, com início em {{ item.inicio }} e término em {{ item.concluido }}.</p>
+            <p>{{ item.descricao }}, {{ locale_startin }} {{ item.inicio }} {{ locale_endin }} {{ item.concluido }}.</p>
             {% endfor %}
         </div>
         <div class="container-info">
             <div class="vertical-group-block">
                 <img class="small-icon" src="./assets/tools-solid.svg" alt="Graduation cap icon">
-                <h3>Habilidades:</h3>
+                <h3>{{ locale_skills }}:</h3>
             </div>
             {% for item in habilidades %}
                 <div class="container-inset">
@@ -51,13 +51,13 @@
                 {% if skill.nivel < 1 %}
                 <p>-</p>
                 {% elif skill.nivel == 1 %}
-                <p>Básico</p>
+                <p>{{ locale_basic }}</p>
                 {% elif skill.nivel == 2 %}
-                <p>Intermediário</p>
+                <p>{{ locale_medium }}</p>
                 {% elif skill.nivel == 3 %}
-                <p><strong>Avançado</strong></p>
+                <p><strong>{{ locale_advanced }}</strong></p>
                 {% else %}
-                <p><strong>Nativo</strong></p>
+                <p><strong>{{ locale_native }}</strong></p>
                 {% endif %}
                 </div>
                 {% endfor %}
@@ -67,7 +67,7 @@
         <div class="container-info">
             <div class="vertical-group-block">
                 <img class="small-icon" src="./assets/briefcase-solid.svg" alt="Briefcase icon">
-                <h3>Experiências Anteriores</h3>
+                <h3>{{ locale_past_exp }}</h3>
             </div>
             <ol>
                 {% for item in experiencias %}
@@ -78,14 +78,14 @@
         <div class="container-info">
             <div class="vertical-group-block">
                 <img class="small-icon" src="./assets/exclamation-circle-solid.svg" alt="Exclamation point icon">
-                <h3>Outros</h3>
+                <h3>{{ locale_others }}</h3>
             </div>
             {% for item in outros %}
             <p>{{ item }}</p>
             {% endfor %}
         </div>
         <footer>
-            <a href="{{ repository }}"><p class="quiet-text">Feito com <img class="tiny-icon-text" src="./assets/coffee-solid.svg" alt="Coffee icon">, jinja2 e Python <3</p></a>
+            <a href="{{ repository }}"><p class="quiet-text">{{ locale_madewith }} <img class="tiny-icon-text" src="./assets/coffee-solid.svg" alt="Coffee icon">, jinja2 {{ locale_and }} Python <3</p></a>
         </footer>
     </div>
 </body>
