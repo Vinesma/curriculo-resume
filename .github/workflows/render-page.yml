@@ -23,7 +23,6 @@ jobs:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         - uses: actions/checkout@v2
 
-        # Install Python
         - name: Setup Python
           uses: actions/setup-python@v2.2.0
 
@@ -32,14 +31,19 @@ jobs:
           with:
               packages: jinja2
 
-        # Run the script
+        # Run the python script
         - name: Render html
           run: python render.py
+
+        - name: Make public dir and copy files
+          run: |
+              mkdir public
+              cp index.html public/index.html
 
         - name: GitHub Pages
           uses: crazy-max/ghaction-github-pages@v2.2.0
           with:
-            # Build directory to deploy
-            build_dir: .
+            build_dir: public
+            target_branch: main
           env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
