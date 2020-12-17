@@ -41,7 +41,6 @@ jobs:
               cp -r css/ public
               cp -r assets/ public
               cp index.html public/index.html
-              cp README.md public
 
         - name: GitHub Pages
           uses: crazy-max/ghaction-github-pages@v2.2.0
