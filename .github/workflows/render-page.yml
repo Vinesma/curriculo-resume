@@ -38,12 +38,15 @@ jobs:
         - name: Make public dir and copy files
           run: |
               mkdir public
+              cp -r css/ public
+              cp -r assets/ public
               cp index.html public/index.html
+              cp README.md public
 
         - name: GitHub Pages
           uses: crazy-max/ghaction-github-pages@v2.2.0
           with:
             build_dir: public
-            target_branch: main
+            target_branch: gh-pages
           env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
