@@ -1,6 +1,6 @@
 from jinja2 import FileSystemLoader, Environment
 from time import localtime
-import json, subprocess
+import json, subprocess, os
 
 with open("./data/ptbr.json") as dataFile:
     data = json.load(dataFile)
@@ -19,5 +19,6 @@ def renderFromTemplate(directory, template_name, **kwargs):
 with open("resume.html", "w") as resume:
     resume.write(renderFromTemplate("./template", "template1.html", **data))
 
-# Convert to pdf
-subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "-B", "0", "-L", "0", "-R", "0", "-T", "0", "resume.html", filename_pdf_pt], check=True)
+if os.path.exists(os.path.join("/", "usr", "bin", "wkhtmltopdf")):
+    # Convert to pdf
+    subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "-B", "0", "-L", "0", "-R", "0", "-T", "0", "resume.html", filename_pdf_pt], check=True)
