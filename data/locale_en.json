@@ -1,0 +1,16 @@
+{
+    "locale_title_prefix": "Resume",
+    "locale_years": "years old",
+    "locale_education": "Education",
+    "locale_startin": "beginning in",
+    "locale_endin": "and finishing in",
+    "locale_skills": "Skills",
+    "locale_basic": "Basic",
+    "locale_medium": "Intermediate",
+    "locale_advanced": "Advanced",
+    "locale_native": "Native",
+    "locale_past_exp": "Past experience",
+    "locale_others": "Others",
+    "locale_madewith": "Made with",
+    "locale_and": "and"
+}

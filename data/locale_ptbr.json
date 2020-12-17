@@ -1,0 +1,16 @@
+{
+    "locale_title_prefix": "Currículo",
+    "locale_years": "anos",
+    "locale_education": "Formação",
+    "locale_startin": "com início em",
+    "locale_endin": "e término em",
+    "locale_skills": "Habilidades",
+    "locale_basic": "Básico",
+    "locale_medium": "Intermediário",
+    "locale_advanced": "Avançado",
+    "locale_native": "Nativo",
+    "locale_past_exp": "Experiências Anteriores",
+    "locale_others": "Outros",
+    "locale_madewith": "Feito com",
+    "locale_and": "e"
+}
