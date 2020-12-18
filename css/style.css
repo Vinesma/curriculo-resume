@@ -41,7 +41,7 @@ h1, h2, h3, h4, p, li {
 }
 
 footer {
-    margin-top: 100px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -115,4 +115,10 @@ footer {
 
 .tiny-icon-text {
     height: 0.9rem;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: .5rem;
+    }
 }
