@@ -6,10 +6,13 @@ def load_from_json(path):
     with open(path) as open_file:
         return json.load(open_file)
 
-def deduce_age(current_year, year_birth):
+def deduce_age(year_birth):
+    current_year = localtime()[:1][0]
     return current_year - year_birth
 
-def create_filename(prefix, name, day, month, year):
+def create_filename(prefix, name):
+    # Get current year, month and day
+    year, month, day = localtime()[:3]
     return f"{prefix} - {name} {day}-{month}-{year}.pdf"
 
 def renderFromTemplate(directory, template_name, **kwargs):
@@ -33,9 +36,6 @@ def convert_to_pdf(filename, output_filename):
         subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "-B", "0", "-L", "0", "-R", "0", "-T", "0", filename, output_filename], check=True)
 
 def main():
-    # Get current year, month and day
-    year, month, day = localtime()[:3]
-
     # Load data
     data = load_from_json("./data/ptbr.json")
     data_en = load_from_json("./data/en.json")
@@ -46,12 +46,12 @@ def main():
     data_en.update(locale_en)
 
     # Convert year into current age
-    data['idade'] = deduce_age(year, data['idade'])
-    data_en['idade'] = deduce_age(year, data_en['idade'])
+    data['idade'] = deduce_age(data['idade'])
+    data_en['idade'] = deduce_age(data_en['idade'])
     # Retrieve some data to create filenames
     name = data['nome']
-    filename_pdf_pt = create_filename("Currículo", name, day, month, year)
-    filename_pdf_en = create_filename("Resume", name, day, month, year)
+    filename_pdf_pt = create_filename("Currículo", name)
+    filename_pdf_en = create_filename("Resume", name)
 
     # Templates -> HTML [-> PDF]
     ## render portuguese resume
