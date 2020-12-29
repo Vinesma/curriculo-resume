@@ -28,12 +28,15 @@ def write_to_html(filename, template_name, **kwargs):
     """
     with open(filename, "w") as open_file:
         open_file.write(renderFromTemplate("./template", template_name, **kwargs))
+    print(f"TEMPLATE -> HTML: [{filename}]")
 
 def convert_to_pdf(filename, output_filename):
     """ Convert html to pdf if wkhtmltopdf is present in the system.
     """
     if os.path.exists(os.path.join("/", "usr", "bin", "wkhtmltopdf")):
         subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "-B", "0", "-L", "0", "-R", "0", "-T", "0", filename, output_filename], check=True)
+    else:
+        print("wkhtmltopdf not found, this external program is necessary to render a pdf from the html file.")
 
 def main():
     # Load data
