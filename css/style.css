@@ -99,7 +99,6 @@ footer {
 .vertical-group-block-marginless {
     display: flex;
     justify-content: start;
-    gap: .4rem;
 }
 
 .vertical-group-block {
@@ -107,7 +106,6 @@ footer {
     justify-content: start;
     align-items: center;
     margin-bottom: .8rem;
-    gap: .4rem;
 }
 
 .vertical-group-block .small-icon {
@@ -119,6 +117,7 @@ footer {
 }
 
 .small-icon {
+    margin-right: .4rem;
     height: 1.2rem;
 }
 
