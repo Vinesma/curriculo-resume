@@ -5,7 +5,7 @@
 }
 
 body {
-    padding: 2rem;
+    padding: 1rem;
     background-color: white;
     /*background: linear-gradient(#444, #333);*/
 }
@@ -54,7 +54,7 @@ footer {
 }
 
 .container {
-    padding: 1rem 1.4rem;
+    padding: 4rem 5rem;
     background-color: white;
     border-radius: 6px;
 }
@@ -125,8 +125,12 @@ footer {
     height: 0.9rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
     body {
         padding: .5rem;
+    }
+
+    .container {
+        padding: 4rem 1rem;
     }
 }
