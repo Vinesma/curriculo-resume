@@ -19,7 +19,7 @@ def renderFromTemplate(directory, template_name, **kwargs):
     """ Render the html
     """
     loader = FileSystemLoader(directory)
-    env = Environment(loader=loader)
+    env = Environment(loader=loader, trim_blocks=True, lstrip_blocks=True)
     template = env.get_template(template_name)
     return template.render(**kwargs)
 
@@ -58,10 +58,10 @@ def main():
 
     # Templates -> HTML [-> PDF]
     ## render portuguese resume
-    write_to_html("index.html", "template1.html", **data)
+    write_to_html("index.html", "template1.html.jinja", **data)
     convert_to_pdf("index.html", filename_pdf_pt)
     ## render english resume
-    write_to_html("resume.html", "template1.html", **data_en)
+    write_to_html("resume.html", "template1.html.jinja", **data_en)
     convert_to_pdf("resume.html", filename_pdf_en)
 
 main()
