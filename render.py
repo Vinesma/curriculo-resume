@@ -58,10 +58,10 @@ def main():
 
     # Templates -> HTML [-> PDF]
     ## render portuguese resume
-    write_to_html("index.html", "template1.html.jinja", **data)
+    write_to_html("index.html", "base.html", **data)
     convert_to_pdf("index.html", filename_pdf_pt)
     ## render english resume
-    write_to_html("resume.html", "template1.html.jinja", **data_en)
+    write_to_html("resume.html", "base.html", **data_en)
     convert_to_pdf("resume.html", filename_pdf_en)
 
 main()
