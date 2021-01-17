@@ -11,6 +11,7 @@
     "tel": "95996-9955",
     "email": "otaviocos14@gmail.com",
     "github": "https://github.com/Vinesma",
+    "linkedin": "https://www.linkedin.com/in/otavio-cornelio-198676136/",
     "educacao": [
         {
             "descricao": "Computer Science graduate at Faculdade de Ciências Aplicadas e Sociais de Petrolina (FACAPE)",
@@ -57,16 +58,12 @@
                     "nivel": 3
                 },
                 {
-                    "nome": "Git",
-                    "nivel": 2
-                },
-                {
-                    "nome": "SASS",
-                    "nivel": 2
+                    "nome": "SQL",
+                    "nivel": 3
                 },
                 {
                     "nome": "React.js",
-                    "nivel": 2
+                    "nivel": 3
                 },
                 {
                     "nome": "React Native",
@@ -77,15 +74,19 @@
                     "nivel": 2
                 },
                 {
-                    "nome": "jQuery",
-                    "nivel": 2
-                },
-                {
-                    "nome": "SQL",
-                    "nivel": 2
-                },
-                {
                     "nome": "MongoDB",
+                    "nivel": 2
+                },
+                {
+                    "nome": "Git",
+                    "nivel": 2
+                },
+                {
+                    "nome": "SASS",
+                    "nivel": 2
+                },
+                {
+                    "nome": "jQuery",
                     "nivel": 2
                 },
                 {

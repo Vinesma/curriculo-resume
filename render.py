@@ -8,7 +8,14 @@ def load_from_json(path):
 
 def deduce_age(year_birth):
     current_year = localtime()[:1][0]
-    return current_year - year_birth
+    before_birthday=True
+
+    age = current_year - year_birth
+
+    if before_birthday:
+        return age - 1
+
+    return age
 
 def create_filename(prefix, name):
     # Get current year, month and day
@@ -33,8 +40,13 @@ def write_to_html(filename, template_name, **kwargs):
 def convert_to_pdf(filename, output_filename):
     """ Convert html to pdf if wkhtmltopdf is present in the system.
     """
+    margin_top = "0"
+    margin_right = "14"
+    margin_bottom = "0"
+    margin_left = "14"
+
     if os.path.exists(os.path.join("/", "usr", "bin", "wkhtmltopdf")):
-        subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "-B", "0", "-L", "0", "-R", "0", "-T", "0", filename, output_filename], check=True)
+        subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "-B", margin_bottom, "-L", margin_left, "-R", margin_right, "-T", margin_top, filename, output_filename], check=True)
     else:
         print("wkhtmltopdf not found, this external program is necessary to render a pdf from the html file.")
 
