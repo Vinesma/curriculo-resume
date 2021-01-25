@@ -78,6 +78,10 @@
                     "nivel": 2
                 },
                 {
+                    "nome": "Jest",
+                    "nivel": 2
+                },
+                {
                     "nome": "Git",
                     "nivel": 2
                 },
@@ -92,10 +96,6 @@
                 {
                     "nome": "PHP",
                     "nivel": 2
-                },
-                {
-                    "nome": "C#",
-                    "nivel": 1
                 }
             ]
         },
@@ -104,10 +104,6 @@
             "skills": [
                 {
                     "nome": "Linux",
-                    "nivel": 3
-                },
-                {
-                    "nome": "Windows",
                     "nivel": 3
                 },
                 {
@@ -164,7 +160,7 @@
         }
     ],
     "experiencias": [
-        "Database management intern at 'ATAC Distribuidora' from 08/2017 to 02/2018. At this job I mostly used my knowledge in SQL and computer maintenance; Python was also heavily used to automate and speed up processes."
+        "Database management intern at 'ATAC Distribuidora' from 08/2017 to 02/2018. I was responsible for the database, printing of price tags, hardware and hastening of repetitive processes. I used knowledge in SQL to maintain the database, and I wrote Python code to automate processes."
     ],
     "outros": [
         "Brazilian National Driver's License (Category B)"

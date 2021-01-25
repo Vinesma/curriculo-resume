@@ -78,6 +78,10 @@
                     "nivel": 2
                 },
                 {
+                    "nome": "Jest",
+                    "nivel": 2
+                },
+                {
                     "nome": "Git",
                     "nivel": 2
                 },
@@ -92,10 +96,6 @@
                 {
                     "nome": "PHP",
                     "nivel": 2
-                },
-                {
-                    "nome": "C#",
-                    "nivel": 1
                 }
             ]
         },
@@ -104,10 +104,6 @@
             "skills": [
                 {
                     "nome": "Linux",
-                    "nivel": 3
-                },
-                {
-                    "nome": "Windows",
                     "nivel": 3
                 },
                 {
@@ -164,7 +160,7 @@
         }
     ],
     "experiencias": [
-        "Estágio como auxiliar nas atividades de suporte técnico e manutenção de banco de dados na empresa ATAC Distribuidora no período de 08/2017 à 02/2018. Utilizei conhecimentos de SQL e manutenção de computadores, também utilizei Python para automatizar e agilizar processos.",
+        "Estágio como auxiliar nas atividades de suporte técnico e manutenção de banco de dados na empresa ATAC Distribuidora no período de 08/2017 à 02/2018. Fui responsável pelo banco de dados, impressão de etiquetas de preço, hardware e agilizar processos repetitivos. Utilizei conhecimentos de SQL no banco de dados, escrevi código em Python para automatização.",
         "Projeto Lixo Eletrônico da FACAPE no período de 2015 à 2016. Utilizei conhecimento de manutenção de computadores para reutilizar os descartes eletrônicos da população e transforma-los em novas máquinas para serem doadas.",
         "Projeto FATI (Faculdade Aberta da Terceira Idade) da FACAPE no período de 02/2016 à 06/2016. Utilizei conhecimentos gerais em computação para organizar e ministrar aulas para pessoas de terceira idade."
     ],
