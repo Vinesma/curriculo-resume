@@ -42,7 +42,11 @@
                     "nivel": 3
                 },
                 {
-                    "nome": "Javascript",
+                    "nome": "JavaScript",
+                    "nivel": 3
+                },
+                {
+                    "nome": "TypeScript",
                     "nivel": 3
                 },
                 {
