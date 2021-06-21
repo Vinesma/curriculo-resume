@@ -1,19 +1,21 @@
 {
+    "locale_id": "pt_BR", 
     "locale_title_prefix": "Currículo",
     "locale_years": "anos",
-    "locale_education": "Formação:",
-    "locale_certificate": "Certificados:",
+    "locale_education": "Formação",
+    "locale_certificate": "Certificados",
     "locale_issued": "Emitido em",
     "locale_seecertificate": "Ver certificado",
     "locale_startin": "com início em",
     "locale_endin": "e término em",
-    "locale_skills": "Habilidades:",
+    "locale_skills": "Habilidades",
     "locale_basic": "Básico",
     "locale_medium": "Intermediário",
     "locale_advanced": "Avançado",
     "locale_native": "Nativo",
-    "locale_past_exp": "Experiências Anteriores:",
+    "locale_past_exp": "Experiência",
     "locale_others": "Outros:",
     "locale_madewith": "Feito com",
-    "locale_and": "e"
+    "locale_and": "e",
+    "locale_since": "Desde"
 }

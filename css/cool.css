@@ -1,0 +1,156 @@
+:root {
+    --color-main: #23049D;
+    --color-white: #FFF;
+    --color-gray1: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bitstream Vera Sans', Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.subtitle {
+    margin-top: .5rem;
+}
+
+.fade {
+    opacity: .6;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.icon-block {
+    margin: .2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon-block *:last-child {
+    flex: 1 0 auto;
+}
+
+.icon-block__icon {
+    flex: 0 0 auto;
+    max-height: 1em;
+    max-width: 1em;
+}
+
+.icon-block__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-block__text {
+    margin: 0 .5rem;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.personal-info {
+    padding: 4rem 1rem 0 2rem;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    flex: 0 0 30%;
+}
+
+.personal-info h4 {
+    margin-top: .4rem;
+}
+
+.personal-info p {
+    margin-top: .8rem;
+}
+
+.personal-info a {
+    margin-top: .5rem;
+    color: var(--color-white);
+}
+
+.personal-info__section {
+    margin-bottom: 3rem;
+}
+
+.details {
+    padding: 4rem 2rem 4rem 3rem;
+    background-color: var(--color-white);
+    color: var(--color-gray1);
+    flex: 0 1 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.details__section {
+    margin-bottom: .5rem;
+    color: var(--color-main);
+    font-size: 1.2rem;
+}
+
+.details__subsection {
+    margin: .8rem 0 0 calc(.5rem + 1.2rem);
+    font-size: 1rem;
+    color: var(--color-gray1);
+}
+
+.details__subsection h5 {
+    margin-bottom: .5rem;
+}
+
+.details__subsection p {
+    margin-bottom: .3rem;
+    font-size: .875rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.skills-item {
+    margin: .1rem .2rem;
+    flex: 0 1 auto;
+    padding: .2rem .4rem;
+    color: var(--color-main);
+}
+
+.skills-item__highlight {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+.skills-item__normal {
+    /* border-bottom: 1px dashed var(--color-main); */
+    color: var(--color-main);
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .details {
+        overflow: hidden;
+    }
+}

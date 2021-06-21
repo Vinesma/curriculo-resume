@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ locale_id }}">
+<head>
+    <link rel="stylesheet" href="css/cool.css">
+    {% include "cool/head.jinja.html" %}
+</head>
+<body>
+    <div class="main-container">
+        <div class="personal-info">
+            <div class="personal-info__section">
+                <h2>{{ nome }}</h2>
+                <h4>{{ titulo }}</h4>
+                <p class="fade">{{ cidade }} - {{ estado }}, {{ pais }}</p>
+            </div>
+            <div class="personal-info__section">
+                <p>{{ descricao_principal }}</p>
+            </div>
+            {% include "cool/contact.jinja.html" %}
+        </div>
+        <div class="details">
+            {% include "cool/experience.jinja.html" %}
+            {% include "cool/education.jinja.html" %}
+            {% include "cool/skills.jinja.html" %}
+            {% include "cool/certs.jinja.html" %}
+        </div>
+    </div>
+</body>
+</html>

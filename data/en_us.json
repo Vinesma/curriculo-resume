@@ -1,52 +1,57 @@
 {
     "nome": "Otavio Cornelio da Silva",
-    "nacionalidade": "Brasileiro",
-    "estado_civil": "Solteiro",
+    "titulo": "Frontend React Developer",
+    "nacionalidade": "Brazilian",
+    "estado_civil": "Single",
     "idade": 1997,
     "endereco": "Rua Lagoa das Capivaras, Nº 53, Jardim das Oliveiras",
     "cep": "08111-150",
     "cidade": "São Paulo",
     "estado": "SP",
+    "pais": "Brazil",
     "ddd": "11",
     "tel": "95996-9955",
     "email": "otaviocos14@gmail.com",
     "github": "https://github.com/Vinesma",
     "linkedin": "https://www.linkedin.com/in/otavio-cornelio-198676136/",
+    "descricao_principal": "I am a Front-end React Developer, specialized in the MERN stack (MongoDB, Express, React, Node). Including React Native for mobile. I'm on a mission to keep my commits flowing forever.",
     "educacao": [
         {
-            "descricao": "Graduação em Ciência da Computação pela Faculdade de Ciências Aplicadas e Sociais de Petrolina (FACAPE)",
+            "title": "Computer Science Degree",
+            "place": "Faculdade de Ciências Aplicadas de Petrolina - FACAPE",
             "inicio": 2015,
-            "concluido": 2019
+            "fim": 2019,
+            "descricao": ""
         }
     ],
     "certificados": [
         {
             "nome": "Full Stack Open Online Course (3 ECTS)",
-            "organizacao": "Universidade de Helsinki",
-            "inicio": "dezembro de 2020",
+            "organizacao": "University of Helsinki",
+            "inicio": "December of 2020",
             "url": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/0bdfa27b931cdc4814b9689ef740ed1c"
         },
         {
             "nome": "EFSET English Certificate 82/100 (C2 Proficient)",
             "organizacao": "EF Standard English Test (EF SET)",
-            "inicio": "dezembro de 2020",
+            "inicio": "December of 2020",
             "url": "https://www.efset.org/cert/xtsAEs"
         }
     ],
     "habilidades": [
         {
-            "categoria": "Programação",
+            "categoria": "Programming",
             "skills": [
                 {
-                    "nome": "Python",
-                    "nivel": 3
-                },
-                {
-                    "nome": "JavaScript",
+                    "nome": "React",
                     "nivel": 3
                 },
                 {
                     "nome": "TypeScript",
+                    "nivel": 3
+                },
+                {
+                    "nome": "JavaScript",
                     "nivel": 3
                 },
                 {
@@ -58,23 +63,23 @@
                     "nivel": 3
                 },
                 {
+                    "nome": "Python",
+                    "nivel": 3
+                },
+                {
                     "nome": "Bash",
                     "nivel": 3
                 },
                 {
-                    "nome": "SQL",
-                    "nivel": 3
-                },
-                {
-                    "nome": "React.js",
-                    "nivel": 3
+                    "nome": "Node.js",
+                    "nivel": 2
                 },
                 {
                     "nome": "React Native",
                     "nivel": 2
                 },
                 {
-                    "nome": "Node.js",
+                    "nome": "SQL",
                     "nivel": 2
                 },
                 {
@@ -94,28 +99,20 @@
                     "nivel": 2
                 },
                 {
-                    "nome": "jQuery",
-                    "nivel": 2
-                },
-                {
                     "nome": "PHP",
-                    "nivel": 2
+                    "nivel": 1
                 }
             ]
         },
         {
-            "categoria": "Ferramentas",
+            "categoria": "Tools",
             "skills": [
                 {
                     "nome": "Linux",
                     "nivel": 3
                 },
                 {
-                    "nome": "JSON",
-                    "nivel": 3
-                },
-                {
-                    "nome": "Regex (Expressões Regulares)",
+                    "nome": "Regex",
                     "nivel": 2
                 },
                 {
@@ -133,43 +130,41 @@
             ]
         },
         {
-            "categoria": "Metodologias",
+            "categoria": "Languages",
             "skills": [
                 {
-                    "nome": "Agile",
-                    "nivel": 0
-                },
-                {
-                    "nome": "Scrum",
-                    "nivel": 0
-                }
-            ]
-        },
-        {
-            "categoria": "Linguagens",
-            "skills": [
-                {
-                    "nome": "Português",
-                    "nivel": 4
-                },
-                {
-                    "nome": "Inglês",
+                    "nome": "Portuguese",
                     "nivel": 3
                 },
                 {
-                    "nome": "Japonês",
+                    "nome": "English",
+                    "nivel": 3
+                },
+                {
+                    "nome": "Japanese",
                     "nivel": 1
                 }
             ]
         }
     ],
     "experiencias": [
-        "Estágio como auxiliar nas atividades de suporte técnico e manutenção de banco de dados na empresa ATAC Distribuidora no período de 08/2017 à 02/2018. Fui responsável pelo banco de dados, impressão de etiquetas de preço, hardware e agilizar processos repetitivos. Utilizei conhecimentos de SQL no banco de dados, escrevi código em Python para automatização.",
-        "Projeto Lixo Eletrônico da FACAPE no período de 2015 à 2016. Utilizei conhecimento de manutenção de computadores para reutilizar os descartes eletrônicos da população e transforma-los em novas máquinas para serem doadas.",
-        "Projeto FATI (Faculdade Aberta da Terceira Idade) da FACAPE no período de 02/2016 à 06/2016. Utilizei conhecimentos gerais em computação para organizar e ministrar aulas para pessoas de terceira idade."
+        {
+            "titulo": "Frontend React Developer",
+            "empresa": "Digitaly Technology",
+            "inicio": "February of 2021",
+            "fim": "",
+            "descricao": "I develop webapps (SPAs) using React + Typescript + Redux + styled-components, based on a design. Tests are made using Jest and react-testing-library. Websites are made for businesses' internal use and/or their users."
+        },
+        {
+            "titulo": "Internship",
+            "empresa": "Atac Distribuidora",
+            "inicio": "August of 2017",
+            "fim": "February of 2018",
+            "descricao": "I was responsible for CRUD operations in the database, printing of price tags, hardware and hastening of repetitive processes. For this role I used knowledge in SQL and I wrote Python code to automate processes."
+        }
     ],
     "outros": [
-        "Carteira Nacional de Habilitação (Categoria B)"
+        "Brazilian National Driver's License (Category B)"
     ],
     "repository": "https://github.com/Vinesma/curriculo-resume"
 }

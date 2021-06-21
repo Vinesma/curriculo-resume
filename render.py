@@ -1,6 +1,8 @@
-from jinja2 import FileSystemLoader, Environment
+import json
+import subprocess
+import os
 from time import localtime
-import json, subprocess, os
+from jinja2 import FileSystemLoader, Environment
 
 def load_from_json(path):
     with open(path) as open_file:
@@ -34,7 +36,7 @@ def write_to_html(filename, template_name, **kwargs):
     """ Convert a template into a html file using the data provided.
     """
     with open(filename, "w") as open_file:
-        open_file.write(renderFromTemplate("./template", template_name, **kwargs))
+        open_file.write(renderFromTemplate("./templates", template_name, **kwargs))
     print(f"TEMPLATE -> HTML: [{filename}]")
 
 def convert_to_pdf(filename, output_filename):
@@ -52,10 +54,10 @@ def convert_to_pdf(filename, output_filename):
 
 def main():
     # Load data
-    data = load_from_json("./data/ptbr.json")
-    data_en = load_from_json("./data/en.json")
-    locale = load_from_json("./data/locale_ptbr.json")
-    locale_en = load_from_json("./data/locale_en.json")
+    data = load_from_json("./data/pt_br.json")
+    data_en = load_from_json("./data/en_us.json")
+    locale = load_from_json("./data/locale_pt_br.json")
+    locale_en = load_from_json("./data/locale_en_us.json")
     # Merge personal data and locale data
     data.update(locale)
     data_en.update(locale_en)
@@ -65,15 +67,15 @@ def main():
     data_en['idade'] = deduce_age(data_en['idade'])
     # Retrieve some data to create filenames
     name = data['nome']
-    filename_pdf_pt = create_filename("Currículo", name)
-    filename_pdf_en = create_filename("Resume", name)
+    filename_pdf_pt_br = create_filename("Currículo", name)
+    filename_pdf_en_us = create_filename("Resume", name)
 
     # Templates -> HTML [-> PDF]
-    ## render portuguese resume
-    write_to_html("index.html", "base.html", **data)
-    convert_to_pdf("index.html", filename_pdf_pt)
-    ## render english resume
-    write_to_html("resume.html", "base.html", **data_en)
-    convert_to_pdf("resume.html", filename_pdf_en)
+    ## render pt_BR resume
+    write_to_html("index.html", "cool.jinja.html", **data)
+    convert_to_pdf("index.html", filename_pdf_pt_br)
+    ## render en_US resume
+    write_to_html("resume.html", "cool.jinja.html", **data_en)
+    convert_to_pdf("resume.html", filename_pdf_en_us)
 
 main()

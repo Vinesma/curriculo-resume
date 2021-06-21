@@ -1,52 +1,57 @@
 {
     "nome": "Otavio Cornelio da Silva",
-    "nacionalidade": "Brazilian",
-    "estado_civil": "Single",
+    "titulo": "Desenvolvedor Frontend React",
+    "nacionalidade": "Brasileiro",
+    "estado_civil": "Solteiro",
     "idade": 1997,
     "endereco": "Rua Lagoa das Capivaras, Nº 53, Jardim das Oliveiras",
     "cep": "08111-150",
     "cidade": "São Paulo",
     "estado": "SP",
+    "pais": "Brasil",
     "ddd": "11",
     "tel": "95996-9955",
     "email": "otaviocos14@gmail.com",
     "github": "https://github.com/Vinesma",
     "linkedin": "https://www.linkedin.com/in/otavio-cornelio-198676136/",
+    "descricao_principal": "Sou um Desenvolvedor Front-end React, especializado na stack MongoDB, Express, React, Node. Além de React Native para mobile. Tenho a missão de manter meus commits fluindo para sempre.",
     "educacao": [
         {
-            "descricao": "Computer Science graduate at Faculdade de Ciências Aplicadas e Sociais de Petrolina (FACAPE)",
+            "title": "Bacharelado, Ciência da Computação",
+            "place": "Faculdade de Ciências Aplicadas de Petrolina - FACAPE",
             "inicio": 2015,
-            "concluido": 2019
+            "fim": 2019,
+            "descricao": ""
         }
     ],
     "certificados": [
         {
             "nome": "Full Stack Open Online Course (3 ECTS)",
-            "organizacao": "University of Helsinki",
-            "inicio": "december of 2020",
+            "organizacao": "Universidade de Helsinki",
+            "inicio": "Dezembro de 2020",
             "url": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/0bdfa27b931cdc4814b9689ef740ed1c"
         },
         {
             "nome": "EFSET English Certificate 82/100 (C2 Proficient)",
             "organizacao": "EF Standard English Test (EF SET)",
-            "inicio": "december of 2020",
+            "inicio": "Dezembro de 2020",
             "url": "https://www.efset.org/cert/xtsAEs"
         }
     ],
     "habilidades": [
         {
-            "categoria": "Programming",
+            "categoria": "Programação",
             "skills": [
                 {
-                    "nome": "Python",
-                    "nivel": 3
-                },
-                {
-                    "nome": "JavaScript",
+                    "nome": "React",
                     "nivel": 3
                 },
                 {
                     "nome": "TypeScript",
+                    "nivel": 3
+                },
+                {
+                    "nome": "JavaScript",
                     "nivel": 3
                 },
                 {
@@ -58,23 +63,23 @@
                     "nivel": 3
                 },
                 {
+                    "nome": "Python",
+                    "nivel": 3
+                },
+                {
                     "nome": "Bash",
                     "nivel": 3
                 },
                 {
-                    "nome": "SQL",
-                    "nivel": 3
-                },
-                {
-                    "nome": "React.js",
-                    "nivel": 3
+                    "nome": "Node.js",
+                    "nivel": 2
                 },
                 {
                     "nome": "React Native",
                     "nivel": 2
                 },
                 {
-                    "nome": "Node.js",
+                    "nome": "SQL",
                     "nivel": 2
                 },
                 {
@@ -94,28 +99,20 @@
                     "nivel": 2
                 },
                 {
-                    "nome": "jQuery",
-                    "nivel": 2
-                },
-                {
                     "nome": "PHP",
-                    "nivel": 2
+                    "nivel": 1
                 }
             ]
         },
         {
-            "categoria": "Tools",
+            "categoria": "Ferramentas",
             "skills": [
                 {
                     "nome": "Linux",
                     "nivel": 3
                 },
                 {
-                    "nome": "JSON",
-                    "nivel": 3
-                },
-                {
-                    "nome": "Regex (Regular Expressions)",
+                    "nome": "Regex",
                     "nivel": 2
                 },
                 {
@@ -133,41 +130,41 @@
             ]
         },
         {
-            "categoria": "Methodologies",
+            "categoria": "Linguagens",
             "skills": [
                 {
-                    "nome": "Agile",
-                    "nivel": 0
-                },
-                {
-                    "nome": "Scrum",
-                    "nivel": 0
-                }
-            ]
-        },
-        {
-            "categoria": "Languages",
-            "skills": [
-                {
-                    "nome": "Portuguese",
-                    "nivel": 4
-                },
-                {
-                    "nome": "English",
+                    "nome": "Português",
                     "nivel": 3
                 },
                 {
-                    "nome": "Japanese",
+                    "nome": "Inglês",
+                    "nivel": 3
+                },
+                {
+                    "nome": "Japonês",
                     "nivel": 1
                 }
             ]
         }
     ],
     "experiencias": [
-        "Database management intern at 'ATAC Distribuidora' from 08/2017 to 02/2018. I was responsible for the database, printing of price tags, hardware and hastening of repetitive processes. I used knowledge in SQL to maintain the database, and I wrote Python code to automate processes."
+        {
+            "titulo": "Frontend React Developer",
+            "empresa": "Digitaly Technology",
+            "inicio": "Fevereiro de 2021",
+            "fim": "",
+            "descricao": "Faço o desenvolvimento de sites (SPAs) com React + Typescript + Redux + styled-components a partir de um design. Com testes em Jest e react-testing-library. Os sites são feitos para uso interno em empresas ou para seus usuários."
+        },
+        {
+            "titulo": "Estágio",
+            "empresa": "Atac Distribuidora",
+            "inicio": "Agosto de 2017",
+            "fim": "Fevereiro de 2018",
+            "descricao": "Fui responsável pelo CRUD do banco de dados, impressão de etiquetas de preço, manutenção de hardware e agilizar processos repetitivos. Utilizei conhecimentos de SQL e escrevi código em Python para automação."
+        }
     ],
     "outros": [
-        "Brazilian National Driver's License (Category B)"
+        "Carteira Nacional de Habilitação (Categoria B)"
     ],
     "repository": "https://github.com/Vinesma/curriculo-resume"
 }
